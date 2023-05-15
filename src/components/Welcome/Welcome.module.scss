@@ -18,10 +18,10 @@
     z-index: 10;
     // background-color: var(--white);
     position: relative;
-    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white),
-      0 -1px var(--white);
+
     cursor: default;
-    animation: welcome 1s 800ms linear forwards;
+    animation: welcome 1s 800ms linear forwards,
+      textShadow 1s 800ms linear forwards;
     transition: all 250ms ease-in-out;
 
     &:hover {
@@ -40,5 +40,15 @@
   }
   to {
     color: var(--black);
+  }
+}
+@keyframes textShadow {
+  from {
+    text-shadow: -1px 0 transparent, 0 1px transparent, 1px 0 transparent,
+      0 -1px transparent;
+  }
+  to {
+    text-shadow: -1px 0 var(--white), 0 1px var(--white), 1px 0 var(--white),
+      0 -1px var(--white);
   }
 }

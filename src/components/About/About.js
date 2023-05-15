@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 const About = () => {
   const { t } = useTranslation(["About"]);
   return (
-    <div className={classes.container}>
+    <div className={classes.container} id="about">
       <header className={classes.header}>
         <h2>{t("ABOUT US")}</h2>
       </header>

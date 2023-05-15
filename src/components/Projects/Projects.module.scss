@@ -1,0 +1,148 @@
+.container {
+  min-height: 100dvh;
+  background-color: var(--white);
+  position: inherit;
+  z-index: 31;
+  padding: 1rem;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: var(--max-width);
+
+  h2 {
+    font-size: clamp(2.5rem, 3.75vw, 7.2rem);
+  }
+  button {
+    color: var(--black);
+    border: 2px solid var(--black);
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+      background-color: var(--black);
+      color: var(--white);
+    }
+  }
+}
+
+.projects {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: var(--max-width);
+
+  & > div {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 1rem;
+    min-height: 50vh;
+
+    & > div {
+      min-width: 300px;
+      min-height: 300px;
+      flex: 1;
+    }
+  }
+}
+
+.project {
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  border-radius: 24px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  isolation: isolate;
+
+  img {
+    position: absolute;
+    object-fit: cover;
+    // height: 100%;
+    // width: 100%;
+    inset: 0;
+    z-index: -1;
+    scale: 1.05;
+    transition: all 250ms ease-in-out;
+  }
+
+  &:hover {
+    img {
+      scale: 1;
+    }
+    .about {
+      -webkit-box-shadow: 0px 0px 107px 0px var(--cyan);
+      -moz-box-shadow: 0px 0px 107px 0px var(--cyan);
+      box-shadow: 20px 20px 107px 20px var(--cyan);
+    }
+  }
+}
+
+.about {
+  position: relative;
+  z-index: 40;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--white);
+  transition: all 250ms ease-in-out;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.project__cta {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  height: auto;
+  aspect-ratio: 1;
+  width: 3rem;
+  border-radius: 6px;
+  background-color: var(--cyan);
+  color: var(--white);
+  border: none;
+}
+
+#project__1 {
+  // background-image: url("../../assets/splace_room.jpg");
+  flex: 2;
+}
+#project__2 {
+  background-image: url("../../assets/togg.jpg");
+}
+#project__3 {
+  background-image: url("../../assets/porsche_digital_foundry_space.jpeg");
+}
+#project__4 {
+  background-image: url("../../assets/audi_smart_home.jpg");
+  flex: 2;
+}

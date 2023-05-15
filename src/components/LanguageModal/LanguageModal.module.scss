@@ -1,0 +1,107 @@
+.container {
+  position: fixed;
+  top: 0;
+  color: var(--white);
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  font-size: clamp(1rem, 3vw, 2rem);
+  pointer-events: none;
+  z-index: 90;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  opacity: 0.8;
+  pointer-events: all;
+}
+
+.label {
+  z-index: 95;
+  pointer-events: all;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  top: 5rem;
+  right: clamp(1rem, 6vw, 10rem);
+  border: 1px solid rgba($color: #111111, $alpha: 0.8);
+  padding: 0.5rem;
+  gap: 0.5rem;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 99px;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+
+  span {
+    font-size: clamp(2rem, 3vw, 2rem);
+  }
+
+  .select__container {
+    padding: 0;
+    display: flex;
+
+    overflow: hidden;
+
+    // animation: selectContainerAnim 0.5s linear forwards;
+    flex: 1;
+  }
+
+  select {
+    // display: none;
+
+    background-color: var(--cyan);
+    padding: 0.5rem;
+    border-radius: 99px;
+    border: none;
+    color: var(--black);
+    font-size: clamp(1rem, 1vw, 1.5rem);
+    position: relative;
+
+    animation: selectAnim 250ms linear forwards;
+  }
+  p {
+    position: inherit;
+    color: var(--white);
+  }
+}
+
+.info {
+  right: 110%;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instruction {
+  top: 125%;
+  right: 30%;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@keyframes selectAnim {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+// @keyframes selectContainerAnim {
+//   from {
+//     width: 0px;
+//   }
+//   to {
+//     width: 100%;
+//   }
+// }
